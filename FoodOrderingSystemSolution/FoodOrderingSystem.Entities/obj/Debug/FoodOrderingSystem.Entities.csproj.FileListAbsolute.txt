@@ -1,0 +1,31 @@
+c:\users\admin\documents\visual studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.DataSt\obj\Debug\FoodOrderingSystem.Entities.csprojResolveAssemblyReference.cache
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\FoodOrderingSystem.DataSt.dll.config
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\FoodOrderingSystem.DataSt.dll
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\FoodOrderingSystem.DataSt.pdb
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\EntityFramework.dll
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\EntityFramework.xml
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\obj\Debug\FoodOrderingSystem.Entities.csprojResolveAssemblyReference.cache
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\obj\Debug\FoodOrderingSystem.DataSt.dll
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\obj\Debug\FoodOrderingSystem.DataSt.pdb
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\FoodOrderingSystem.DataSt.dll.config
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\FoodOrderingSystem.DataSt.dll
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\FoodOrderingSystem.DataSt.pdb
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\EntityFramework.dll
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\EntityFramework.xml
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\obj\Debug\FoodOrderingSystem.Entities.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\obj\Debug\FoodOrderingSystem.DataSt.dll
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\obj\Debug\FoodOrderingSystem.DataSt.pdb
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\FoodOrderingSystem.DataSt.dll.config
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\FoodOrderingSystem.DataSt.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\FoodOrderingSystem.DataSt.pdb
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\EntityFramework.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\EntityFramework.xml
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\obj\Debug\FoodOrderingSystem.Entities.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\obj\Debug\FoodOrderingSystem.DataSt.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.Entities\obj\Debug\FoodOrderingSystem.DataSt.pdb

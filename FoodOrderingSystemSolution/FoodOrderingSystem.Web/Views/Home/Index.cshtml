@@ -1,0 +1,222 @@
+﻿@using GridMvc.Html
+@using GridMvc.Sorting
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@{var customer = ViewData["Customer"] as FoodOrderingSystem.Entities.Customer;}
+@{var totalCost = (double)ViewData["totalCosts"];}
+<div class="row">
+    <div class="jumbotron">
+        <h1>Welcome @User.Identity.Name</h1>
+        <br />
+        <h3 style="color:blue">@ViewBag.Message</h3>
+        @Html.Grid(ViewData["orderedItems"] as List<FoodOrderingSystem.Entities.OrderedItem>).Columns(columns =>
+            {
+                /* Adding not mapped column, that renders body, using inline Razor html helper */
+                columns.Add()
+                        .Encoded(false)
+                        .Sanitized(false)
+                        .SetWidth(30)
+                        .RenderValueAs(d =>
+                            @<b>
+                                @Html.ActionLink("OrderedItem", "Edit")
+                            </b>);
+
+                /* Adding "OrderId" column: */
+                columns.Add(o => o.OrderedItemId)
+                        .Titled("Order Number")
+                        .SetWidth(100);
+
+                /* Adding "OrderName" column: */
+                columns.Add(o => o.Order.Name)
+                        .Titled("Order Name")
+                        .SetWidth(100);
+
+                /* Adding "DateOrdered" column: */
+                columns.Add(o => o.Order.DateOrdered, "DateOrdered")
+                        .Titled("Date Ordered")
+                    //.SortInitialDirection(GridMvc.Sorting.GridSortDirection.Descending)
+                        .Format("{0:dd/MM/yyyy}")
+                        .SetWidth(110);
+
+                /* Adding "OrderDateReceived" column: */
+                columns.Add(o => o.Order.DateReceived, "OrderDateReceived")
+                        .Titled("Date Received")
+                    //.SortInitialDirection(GridMvc.Sorting.GridSortDirection.Descending)
+                        .Format("{0:dd/MM/yyyy}")
+                        .SetWidth(110);
+
+                /* Adding Price column: */
+                columns.Add(o => o.MenuItem.Price)
+                        .Titled("Price")
+                        .SetWidth(150);
+                //.RenderValueAs(o => CustomRenderingOfColumn(o));
+
+                /* Adding "Quantity" column: */
+                columns.Add(o => o.Quantity)
+                        .Titled("Quantity");
+                //.ThenSortByDescending(o => o.OrderID)
+                //.SetFilterWidgetType("CustomCompanyNameFilterWidget");
+
+                ///* Adding "LastName" column: */
+                //columns.Add(o => o.Customer.LastName)
+                //        .Titled("Last Name");
+                ////.ThenSortByDescending(o => o.OrderID)
+                ////.SetFilterWidgetType("CustomCompanyNameFilterWidget");
+
+                ///* Adding "Vip customer" column: */
+                //columns.Add(o => o.AmountPaid)
+                //        .Titled("Amount Paid")
+                //        .SetWidth(150);
+                //.RenderValueAs(o => CustomRenderingOfColumn(o));
+                columns.Add()
+                        .Encoded(false)
+                        .Sanitized(false)
+                        .SetWidth(30)
+                        .RenderValueAs(d =>
+                            @<b>
+                                <button id="delete-order-button" class="right btn-success " itemid="@d.OrderedItemId" >Delete Ordered Item</button>
+                            </b>);
+
+            }).WithPaging(15).Sortable().Filterable().WithMultipleFilters()
+
+        <form role="form" class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2 col-md-2 col-lg-2">Total Costs:</label>
+                <div class="input-group col-sm-10 col-md-10 col-lg-10">
+                    <span class="input-group-addon">R</span>
+                    <input type="text" class="form-control" value="@totalCost" readonly>
+                </div>
+            </div>
+            <button id="place-order-button" class="right btn-success">Place Order</button>
+            @*<button id="summary-button" class="right btn-success">View Summary</button>*@
+        </form>
+    </div>
+</div>
+<br />
+<div class="row">
+    <h1>Food Menu</h1>
+    <div class="container">
+        <div class="row">
+            @{int itemId = 1;}
+            <div class="col-sm-3 col-md-3 col-lg-3">
+
+                <div class="panel-group" id="accordion">
+                    @{int aActiveImage = 1;}
+                    @foreach (var menuCatagory in ViewData["MenuCategories"] as List<FoodOrderingSystem.Entities.MenuCategory>)
+                    {
+                        var itemHref = "#Collapse" + aActiveImage.ToString();
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="@itemHref">
+                                        <img class="icon" style="width:20px;height:20px;" src="@Url.Content(menuCatagory.ImagePath)" alt="@menuCatagory.CategoryName">
+                                        <span class="title">@menuCatagory.CategoryName</span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="@itemHref.Replace("#", "")" class="panel-collapse collapse in">
+                                @{int aActiveImageAgain = 1;}
+
+
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <tbody>
+                                            @foreach (var menuItem in @menuCatagory.MenuItems as List<FoodOrderingSystem.Entities.MenuItem>)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        <div class="row show-grid">
+                                                            <div class="span12" data-original-title="" title="">
+                                                                <a>
+                                                                    <img class="icon" style="width:14px;height:14px;"
+                                                                         src="@Url.Content(menuItem.ImagePath)"
+                                                                         alt="@menuItem.Name">
+                                                                    <strong><span class="title">@menuItem.Name</span></strong>
+                                                                </a>
+                                                            </div>
+                                                            <br />
+                                                            <div class="span12" data-original-title="" title="">
+                                                                <button class="right btn-success display-item-button" itemid=@menuItem.MenuItemId customerid="@customer.CustomerId">View Item</button>@*data-url="@Url.Action(,)"*@
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                aActiveImageAgain++;
+                                                itemId = menuItem.MenuItemId;
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                                            aActiveImage++;
+                    }
+                </div>
+            </div>
+            <div class="col-sm-9 col-md-9 col-lg-9">
+                @*@Html.Action("SelectedMenuItem", "Home", new { id = @itemId })*@
+                <div id="selectedMenuItem"></div>
+            </div>
+        </div>
+    </div>
+</div>
+@*<div class="row">
+        <h1>Food Menu(Jquery Accordion)</h1>
+        <div class="container">
+            <div class="row">
+                @{int itemNewId = 1;}
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    <div class="panel-group" id="JqueryAccordian">
+
+                        @{int aActiveImage2 = 1;}
+                        @foreach (var menuCatagory in ViewData["MenuCategories"] as List<FoodOrderingSystem.Entities.MenuCategory>)
+                        {
+                            <h3>
+                                <a data-toggle="collapse" data-parent="#accordion" href="@itemHref">
+                                    <img class="icon" style="width:20px;height:20px;" src="@Url.Content(menuCatagory.ImagePath)" alt="@menuCatagory.CategoryName">
+                                    <span class="title">@menuCatagory.CategoryName</span>
+                                </a>
+                            </h3>
+                            <div>
+                                @foreach (var menuItem in @menuCatagory.MenuItems as List<FoodOrderingSystem.Entities.MenuItem>)
+                                {
+                                    <div class="span12" data-original-title="" title="">
+                                        <a>
+                                            <img class="icon" style="width:14px;height:14px;"
+                                                 src="@Url.Content(menuItem.ImagePath)"
+                                                 alt="@menuItem.Name">
+                                            <strong><span class="title">@menuItem.Name</span></strong>
+                                        </a>
+                                    </div>
+                                    <br />
+                                    <div class="span12" data-original-title="" title="">
+                                        <button class="right btn-success display-item-button" itemid=@menuItem.MenuItemId customerid="@customer.CustomerId">View Item</button>@*data-url="@Url.Action(,)"*
+                                    </div>
+                                    aActiveImage2Again++;
+                                    itemNewId = menuItem.MenuItemId;
+                                }
+                                <p>
+                                    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                                    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                                    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                                    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                                </p>
+                            </div>
+                                aActiveImage2++;
+                        }
+                    </div>
+                </div>
+                <div class="col-sm-9 col-md-9 col-lg-9">
+                    @Html.Action("SelectedMenuItem", "Home", new { id = @itemId })*
+                    <div id="selectedMenuItem"></div>
+                </div>
+            </div>
+        </div>
+    </div>*@

@@ -1,0 +1,52 @@
+﻿@model FoodOrderingSystem.Entities.MenuItem
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{var menuItemModel = ViewData["MenuItem"] as FoodOrderingSystem.Entities.MenuItem;}
+@{var orderModel = ViewData["Order"] as FoodOrderingSystem.Entities.Order;}
+@{var orderedItem = ViewData["OrderedItem"] as FoodOrderingSystem.Entities.OrderedItem;}
+<li class="span12">
+    <div class="thumbnail">
+        <img src="@menuItemModel.ImagePath">
+        <div class="caption">
+            <h3>@menuItemModel.Name</h3>
+            <p>@menuItemModel.Description</p>
+            <form role="form" class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-2 col-md-2 col-lg-2">Item Price:</label>
+                    <div class="input-group col-sm-10 col-md-10 col-lg-10">
+                        <span class="input-group-addon">R</span>
+                        <input type="text" class="form-control" value="@menuItemModel.Price" readonly>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2 col-md-2 col-lg-2" for="OrderedItemQuantity">Number Of Items</label>
+                    <div class="col-sm-10 col-md-10 col-lg-10">
+                        <input class="form-control" id="OrderedItemQuantity" type="number" value="1" />
+                    </div>
+                </div>
+            </form>
+            <p>
+                <button id="btnOrderItem" class="btn btn-success">Order Item</button>
+            </p>
+            <input id="MenuItemId" value="@menuItemModel.MenuItemId " style="visibility:hidden" />
+            <input id="MenuItemName" type="text" value="@menuItemModel.Name " style="visibility:hidden" />
+            <input id="Price" type="text" value="@menuItemModel.Price " style="visibility:hidden" />
+            <input id="MenuCategoryId" type="text" value="@menuItemModel.MenuCategoryId " style="visibility:hidden" />
+            <input id="ImagePath" type="text" value="@menuItemModel.ImagePath " style="visibility:hidden" />
+            <input id="Description" type="text" value="@menuItemModel.Description " style="visibility:hidden" />
+            <input id="MenuCategoryId" type="text" value="@menuItemModel.MenuCategoryId " style="visibility:hidden" />
+
+            @*<input id="AmountPaid" value="@orderModel.AmountPaid " style="visibility:hidden" />
+                <input id="OrderName" type="text" value="@orderModel.Name " style="visibility:hidden" />
+                <input id="DateOrdered" type="datetime" value="@orderModel.DateOrdered " style="visibility:hidden" />*@
+            @*<input id="OrderQuantity" type="text" value="@orderModel.Quantity " style="visibility:hidden" />
+                <input id="DateReceived" type="text" value="@orderModel.DateReceived " style="visibility:hidden" />
+                <input id="CustomerId" type="text" value="@orderModel.CustomerId " style="visibility:hidden" />
+                <input id="OrderId" type="text" value="@orderModel.OrderId " style="visibility:hidden" />*@
+
+
+            @*<input id="OrdereditemId" type="text" value="@orderedItem.OrderedItemId " style="visibility:hidden" />*@
+        </div>
+    </div>
+</li>

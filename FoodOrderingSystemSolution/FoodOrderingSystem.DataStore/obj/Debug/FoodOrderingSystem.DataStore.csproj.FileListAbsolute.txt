@@ -1,0 +1,59 @@
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\obj\Debug\FoodOrderingSystem.DataStore.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataStore.dll.config
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataStore.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataStore.pdb
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataSt.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataSt.pdb
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.xml
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\obj\Debug\FoodOrderingSystem.DataStore.dll
+C:\Users\admin\Documents\Visual Studio 2013\Projects\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\obj\Debug\FoodOrderingSystem.DataStore.pdb
+H:\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataStore.dll.config
+H:\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataStore.dll
+H:\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataStore.pdb
+H:\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.dll
+H:\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.SqlServer.dll
+H:\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataSt.dll
+H:\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataSt.pdb
+H:\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.xml
+H:\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.SqlServer.xml
+H:\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\obj\Debug\FoodOrderingSystem.DataStore.csprojResolveAssemblyReference.cache
+H:\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\obj\Debug\FoodOrderingSystem.DataStore.dll
+H:\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\obj\Debug\FoodOrderingSystem.DataStore.pdb
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\obj\Debug\FoodOrderingSystem.DataStore.csprojResolveAssemblyReference.cache
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\obj\Debug\FoodOrderingSystem.DataStore.dll
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\obj\Debug\FoodOrderingSystem.DataStore.pdb
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataStore.dll.config
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataStore.dll
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataStore.pdb
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.dll
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.SqlServer.dll
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataSt.dll
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataSt.pdb
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.xml
+C:\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataStore.dll.config
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataStore.dll
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataStore.pdb
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.dll
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataSt.dll
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataSt.pdb
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.xml
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\obj\Debug\FoodOrderingSystem.DataStore.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\obj\Debug\FoodOrderingSystem.DataStore.dll
+C:\Users\admin\Documents\Derivco\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\obj\Debug\FoodOrderingSystem.DataStore.pdb
+C:\Users\admin\Documents\Derivco - Copyq\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataStore.dll.config
+C:\Users\admin\Documents\Derivco - Copyq\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataStore.dll
+C:\Users\admin\Documents\Derivco - Copyq\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataStore.pdb
+C:\Users\admin\Documents\Derivco - Copyq\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.dll
+C:\Users\admin\Documents\Derivco - Copyq\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\admin\Documents\Derivco - Copyq\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataSt.dll
+C:\Users\admin\Documents\Derivco - Copyq\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\FoodOrderingSystem.DataSt.pdb
+C:\Users\admin\Documents\Derivco - Copyq\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.xml
+C:\Users\admin\Documents\Derivco - Copyq\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\admin\Documents\Derivco - Copyq\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\obj\Debug\FoodOrderingSystem.DataStore.dll
+C:\Users\admin\Documents\Derivco - Copyq\FoodOrderingSystemSolution\FoodOrderingSystem.DataStore\obj\Debug\FoodOrderingSystem.DataStore.pdb

@@ -1,0 +1,94 @@
+﻿@using GridMvc.Html
+@using GridMvc.Sorting
+@*@model FoodOrderingSystem.Entities.OrderedItem*@
+
+@{
+    ViewBag.Title = "Summary Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{var customer = ViewData["Customer"] as FoodOrderingSystem.Entities.Customer;}
+@{var totalCost = (double)ViewData["totalCosts"];}
+@{var amountPaid = (double)ViewData["amountPaid"];}
+<div class="row">
+    <div class="jumbotron">
+        <h2>Summary For </h2>
+        <br />
+        <h3 style="color:blue">@ViewBag.Message</h3>
+        @Html.Grid(ViewData["orderedItems"] as List<FoodOrderingSystem.Entities.OrderedItem>).Columns(columns =>
+            {
+                /* Adding "OrderId" column: */
+                columns.Add(o => o.OrderedItemId)
+                        .Titled("Order Number")
+                        .SetWidth(100);
+
+                /* Adding "OrderName" column: */
+                columns.Add(o => o.Order.Name)
+                        .Titled("Order Name")
+                        .SetWidth(100);
+
+                /* Adding "DateOrdered" column: */
+                columns.Add(o => o.Order.DateOrdered, "DateOrdered")
+                        .Titled("Date Ordered")
+                    //.SortInitialDirection(GridMvc.Sorting.GridSortDirection.Descending)
+                        .Format("{0:dd/MM/yyyy}")
+                        .SetWidth(110);
+
+                /* Adding "OrderDateReceived" column: */
+                columns.Add(o => o.Order.DateReceived, "OrderDateReceived")
+                        .Titled("Date Received")
+                    //.SortInitialDirection(GridMvc.Sorting.GridSortDirection.Descending)
+                        .Format("{0:dd/MM/yyyy}")
+                        .SetWidth(110);
+
+                /* Adding Price column: */
+                columns.Add(o => o.MenuItem.Price)
+                        .Titled("Price")
+                        .SetWidth(150);
+                //.RenderValueAs(o => CustomRenderingOfColumn(o));
+
+                /* Adding "Quantity" column: */
+                columns.Add(o => o.Quantity)
+                        .Titled("Quantity");
+                //.ThenSortByDescending(o => o.OrderID)
+                //.SetFilterWidgetType("CustomCompanyNameFilterWidget");
+
+                /* Adding "FirstName" column: */
+                columns.Add(o => o.Order.Customer.FirstName)
+                        .Titled("First Name");
+                //.ThenSortByDescending(o => o.OrderID)
+                //.SetFilterWidgetType("CustomCompanyNameFilterWidget");
+                
+                /* Adding "LastName" column: */
+                columns.Add(o => o.Order.Customer.LastName)
+                        .Titled("Last Name");
+                //.ThenSortByDescending(o => o.OrderID)
+                //.SetFilterWidgetType("CustomCompanyNameFilterWidget");
+
+                /* Adding "Vip customer" column: */
+                columns.Add(o => o.Order.AmountPaid)
+                        .Titled("Amount Paid");
+                //        .SetWidth(150);
+                //.RenderValueAs(o => CustomRenderingOfColumn(o));
+
+            }).WithPaging(15).Sortable().Filterable().WithMultipleFilters()
+
+        <form role="form" class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2 col-md-2 col-lg-2">Total Costs:</label>
+                <div class="input-group col-sm-10 col-md-10 col-lg-10">
+                    <span class="input-group-addon">R</span>
+                    <input type="text" class="form-control" value="@totalCost" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2 col-md-2 col-lg-2">Total Amount Paid:</label>
+                <div class="input-group col-sm-10 col-md-10 col-lg-10">
+                    <span class="input-group-addon">R</span>
+                    <input type="text" class="form-control" value="@amountPaid" readonly>
+                </div>
+            </div>
+         </form>
+    </div>
+</div>
+

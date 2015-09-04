@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Food Orderer", "Index", "Home", null, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Customer", "Index", "Customer")</li>
+                    <li>@Html.ActionLink("Order", "Index", "Order")</li>
+                    <li>@Html.ActionLink("Menu Item", "Index", "MenuItem")</li>
+                    <li>@Html.ActionLink("Category", "Index", "MenuCategory")</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="navbar-text">Hello, @User.Identity.Name!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <br />
+        @{
+            ViewBag.Title = "Home Page";
+        }
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script>
+        $(function () {
+            Boxlayout.init();
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('.carousel').carousel();
+
+            $('.display-item-button').click(function () {
+                $("#selectedMenuItem")
+                    .load("/Home/SelectedMenuItem?menuItemId="
+                    + $(this).attr("itemid") + "&customerId=" + $(this).attr("customerid"));
+
+                document.getElementById("selectedMenuItem").focus();
+            });
+            $("#btnOrderItem").click(function () {
+                var menuItem = function () {
+                    this.MenuItemId = '';
+                    this.Name = '';
+                    this.Description = '';
+                    this.price = '';
+                    this.ImagePath = '';
+                    this.MenuCategoryId = '';
+                    this.MenuCategory = '';
+                    this.OrderedItems = [];
+                }
+                menuItem.MenuItemId = $('#MenuItemId').val();
+                menuItem.Price = $('#Price').val();
+                menuItem.ImagePath = $('#ImagePath').val();
+                menuItem.Description = $('#Description').val();
+                menuItem.Name = $('#MenuItemName').val();
+
+                var order = function () {
+                    this.OrderId = '';
+                    this.Name = '';
+                    this.DateOrdered = '';
+                    this.DateReceived = '';
+                    this.AmountPaid = '';
+                    this.Quantity = '';
+                    this.CustomerId = '';
+                    this.Customer = {};
+                    this.OrderedItems = [{}];
+                }
+                menuItem.OrderId = $('#OrderId').val();
+                menuItem.Name = $('#OrderName').val();
+                menuItem.DateOrdered = $('#DateOrdered').val();
+                menuItem.OrderQuantity = $('#OrderQuantity').val();
+                menuItem.DateReceived = $('#DateReceived').val();
+                menuItem.CustomerId = $('#CustomerId').val();
+                menuItem.OrderId = $('#OrderId').val();
+
+                var orderedItem = function () {
+                    this.OrderedItemId = '';
+                    this.MenuItemId = '';
+                    this.Quantity = '';
+                    this.OrderId = '';
+                }
+                orderedItem.OrderedItemId = $('#OrderedItemId').val();
+                orderedItem.MenuItemId = $('#MenuItemId').val();
+                orderedItem.Quantity = $('#OrderedItemQuantity').val() || 1;
+
+                $.ajax({
+                    url: '@Url.Action("OrderMenuItem", "Home")',
+                    dataType: "json",
+                    type: "POST",
+                    data: orderedItem,
+                    success: function (result) {
+                        window.location.href = '@Url.Action("Index", "Home")';
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        window.location.href = '@Url.Action("Index", "Home")';
+                    }
+                });
+            });
+            $("#delete-order-button").click(function () {
+                var thisOrderedItemId = $(this).attr("itemid");
+                alert(thisOrderedItemId);
+                $.ajax({
+                    url: '@Url.Action("DeleteOrderedMenuItem", "Home")' + '?orderedItemId=' + thisOrderedItemId,
+                    dataType: "json",
+                    type: "Delete",
+                    //data: thisOrderedItemId,
+                    success: function (result) {
+                        window.location.href = '@Url.Action("Index", "Home")';
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        window.location.href = '@Url.Action("Index", "Home")';
+                    }
+                });
+            });
+            $("#summary-button").click(function () {
+                alert('Inside Summary');
+                $.ajax({
+                    url: '@Url.Action("DeleteOrderedMenuItem", "Home")' + '?orderedItemId=' + thisOrderedItemId,
+                    dataType: "json",
+                    type: "Delete",
+                    //data: thisOrderedItemId,
+                    success: function (result) {
+                        window.location.href = '@Url.Action("Index", "Summary")';
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        window.location.href = '@Url.Action("Index", "Home")';
+                    }
+                });
+            });
+            $("#place-order-button").click(function () {
+                alert('Inside place-order');
+                $.ajax({
+                    url: '@Url.Action("PlaceOrder", "Home")',
+                    dataType: "json",
+                    type: "Post",
+                    //data: thisOrderedItemId,
+                    success: function (result) {
+                        window.location.href = '@Url.Action("Index", "Summary")';
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        window.location.href = '@Url.Action("Index", "Home")';
+                    }
+                });
+            });
+
+            $("#JqueryAccordian").accordion();
+
+        }); // end document.ready
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
